@@ -1,3 +1,4 @@
 credfile.json
-.ipython_notebooks/
+.ipython_notebooks
+.ipynb_checkpoints
 *.csv
