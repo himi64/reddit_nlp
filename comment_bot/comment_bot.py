@@ -1,8 +1,9 @@
 import praw
-# import config
 import time
 import os
 import json
+
+# Code: https://github.com/yashar1/reddit-comment-bot
 
 def bot_login(credfile):
 	
@@ -24,21 +25,20 @@ def bot_login(credfile):
 
 def run_bot(r, comments_replied_to):
 	print("Searching last 1,000 comments")
+	user_comment = "great goal"
+	for comment in r.subreddit('soccer').comments(limit=1000):
+		if user_comment in comment.body and comment.id not in comments_replied_to and comment.author != r.user.me():
+			print(f"String with {user_comment} found in comment " + comment.id)
+			# comment.reply("Hey, I like your comment!")
+			# print("Replied to comment " + comment.id)
+			# comments_replied_to.append(comment.id)
 
-	for comment in r.subreddit('test').comments(limit=1000):
-		if "sample user comment" in comment.body and comment.id not in comments_replied_to and comment.author != r.user.me():
-			print("String with \"sample user comment\" found in comment " + comment.id)
-			comment.reply("Hey, I like your comment!")
-			print("Replied to comment " + comment.id)
-
-			comments_replied_to.append(comment.id)
-
-			with open ("comments_replied_to.txt", "a") as f:
-				f.write(comment.id + "\n")
+			# with open ("comments_replied_to.txt", "a") as f:
+			# 	f.write(comment.id + "\n")
 
 	print("Search Completed.")
 
-	print(comments_replied_to)
+	# print(comments_replied_to)
 
 	print("Sleeping for 10 seconds...")
 	#Sleep for 10 seconds...		
