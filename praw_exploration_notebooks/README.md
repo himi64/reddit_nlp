@@ -1,5 +1,5 @@
-# reddit_nlp
-xamining the features of Reddit's PRAW (Python Reddit API Wrapper) and analysis of posts &amp; comments
+# NLP ANalysis on Reddit Posts & Comments
+Examining the features of Reddit's PRAW (Python Reddit API Wrapper) and analysis of posts &amp; comments
 
 ## Getting Started
 1. Clone this repo
