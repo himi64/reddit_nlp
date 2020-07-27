@@ -6,7 +6,7 @@ Examining the features of Reddit's PRAW (Python Reddit API Wrapper) and analysis
 2. Obtain Reddit API credentials
 
 ### Credfile
-These notebooks reference a JSON credfile to authenticate with your Reddit account. You can get these credentials from your reddit account, or follow the Ppraw documnetation [here](https://praw.readthedocs.io/en/latest/getting_started/quick_start.html). The credfile is stored in the same direcotry as the notebooks, and looks as follows:
+Tese notebooks reference a JSON credfile to authenticate with your Reddit account. You can get these credentials from your reddit account, or follow the praw documnetation [here](https://praw.readthedocs.io/en/latest/getting_started/quick_start.html). The credfile is stored in the same direcotry as the notebooks, and looks as follows:
 
 ```
 {
